@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\MailjetEmailHandler;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind('Mailjet', function () {
+            return new MailjetEmailHandler(env('MAILJET_API_KEY'), env('MAILJET_SECRET_KEY'));
+        });
     }
 }
