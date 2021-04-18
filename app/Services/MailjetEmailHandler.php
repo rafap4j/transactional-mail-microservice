@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Log;
 use Mailjet\Client;
 use Mailjet\Resources;
 
+/**
+ * Mailjet e-mail handler class.
+ *
+ * @package App\Services
+ */
 class MailjetEmailHandler implements EmailHandler
 {
     /**
