@@ -116,4 +116,19 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | E-mail services
+    |--------------------------------------------------------------------------
+    |
+    | Here we're specifying the e-mail services that will be used in order
+    | to send the messages through our transactional mail microservice.
+    |
+    */
+    'default_email_service' => env('DEFAULT_EMAIL_SERVICE', 'Mailjet'),
+
+    'fallback_email_services' => [
+        'Sendgrid',
+    ],
+
 ];
