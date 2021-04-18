@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\SentEmail;
 use App\Services\Interfaces\EmailHandler;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
@@ -47,6 +48,7 @@ class SendgridEmailHandler implements EmailHandler
             (new SendGridClient($this->sendgridApiKey))->send($email);
 
             $this->log($data);
+            SentEmail::create($data);
         } catch (\Throwable $th) {
             throw $th;
         }
