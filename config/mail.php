@@ -75,6 +75,10 @@ return [
             'api_key' => env('MAILJET_API_KEY'),
             'secret_key' => env('MAILJET_SECRET_KEY'),
         ],
+
+        'sendgrid' => [
+            'api_key' => env('SENDGRID_API_KEY'),
+        ],
     ],
 
     /*
