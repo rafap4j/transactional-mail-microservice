@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Just Eat Takeaway'),
 
     /*
     |--------------------------------------------------------------------------
@@ -228,6 +228,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Mailjet' => App\Services\MailjetEmailHandler::class,
+        'Sendgrid' => App\Services\SendgridEmailHandler::class,
     ],
 
 ];
